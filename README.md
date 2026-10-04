@@ -1,82 +1,47 @@
 # ResuMay!
 
-ResuMay! is an ATS resume optimization app built with React, TypeScript, and Vite.
+ResuMay! helps you tailor a resume to a job description. Review keyword matches and gaps, refine your summary and experience bullets, preview the result, and export a PDF.
 
-It combines three things in one workflow:
+## Features
 
-- A guided resume builder
-- ATS-style job description matching
-- A live optimized resume preview with PDF export
+- Build and edit your resume in a guided form
+- Compare resume content with a target job description and see matching or missing keywords
+- Get an ATS-style match score and suggestions for your summary and experience bullets
+- Preview the resume as you edit
+- Export the finished resume as a PDF
+- Save your workspace in your browser
+- Submit and browse community reviews; shared reviews can be enabled on Vercel
 
-## What It Does
+## Run locally
 
-- Paste a target job description and role
-- Build or edit your resume directly in the app
-- Surface matched and missing keywords from the target job
-- Generate a stronger ATS-focused summary suggestion
-- Refine experience bullets into clearer recruiter-friendly language
-- Preview the optimized version instantly
-- Save your workspace locally in the browser
-- Export the optimized resume as a PDF
+You’ll need Node.js and npm.
 
-## Product Direction
+```sh
+npm install
+npm run dev
+```
 
-This version of ResuMay! is designed more like a high-conversion ATS optimization product than a generic form-only builder.
+Open the local URL printed by Vite (usually `http://localhost:5173`).
 
-It keeps the app:
+Useful scripts:
 
-- Job-targeted
-- Role-flexible
-- Conversion-focused
-- Local-first
-- Built for modern online job boards
-- Ready for shared user reviews
+```sh
+npm run build    # Create a production build in dist/
+npm run preview  # Preview the production build locally
+npm run lint     # Run ESLint
+```
 
-## Getting Started
+## Shared reviews on Vercel
 
-1. Install dependencies with `npm install`
-2. Start the dev server with `npm run dev`
-3. Open `http://localhost:5173`
+The frontend works without a review backend. Without one, review submissions are stored locally in the browser. To enable shared reviews, deploy with Vercel and set `BLOB_READ_WRITE_TOKEN` in the project’s environment variables. See [.env.example](.env.example) for the variable name.
 
-## Usage Flow
+The Vercel Functions in `api/` provide:
 
-1. Enter your target role and paste the job description
-2. Fill in your resume basics, experience, skills, and supporting sections
-3. Review the live ATS score, keyword coverage, summary suggestion, and refined bullets
-4. Toggle the optimized version on and export the final PDF
+- `GET /api/reviews` — return approved public reviews
+- `POST /api/reviews` — submit a review
 
-## Tech
+The plain Vite development server serves the frontend only. Use Vercel’s local runtime to develop against the API routes.
 
-- React 18
-- TypeScript
-- Vite
-- jsPDF
-- html2canvas
-- Bootstrap Icons
+## Built with
 
-## Deployment
-
-ResuMay! now supports two review modes:
-
-- Static mode: the app still works as a frontend-only deploy, and review submissions stay local to the user's device
-- Shared review mode: when deployed on Vercel with Blob storage configured, approved reviews are loaded from a shared backend and new submissions publish directly to the public wall
-
-### Shared Review Backend
-
-ResuMay! includes a Vercel Function under `api/` for shared reviews:
-
-- `GET /api/reviews`
-  Returns approved public reviews
-- `POST /api/reviews`
-  Accepts a new review and publishes it to the shared review wall
-
-### Environment Variables
-
-Copy [.env.example](/c:/Resume_Builder/.env.example) to a local `.env.local` or configure the same values in Vercel:
-
-- `BLOB_READ_WRITE_TOKEN`
-  Required to enable the shared review backend
-
-### Local Development Note
-
-`npm run dev` serves the Vite frontend only. For shared review APIs, run the project through Vercel's local runtime. If the API is unavailable, the app falls back to local review storage so the submission UX still works.
+React, TypeScript, Vite, Bootstrap, jsPDF, html2canvas, and Vercel Blob.
