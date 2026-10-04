@@ -1,20 +1,19 @@
 # ResuMay!
 
-ResuMay! helps you tailor a resume to a job description. Review keyword matches and gaps, refine your summary and experience bullets, preview the result, and export a PDF.
+ResuMay! is a small set of focused tools for preparing a job application. It includes a landing page, resume builder, resume checker, and application letter writer, styled with the colors from the ResuMay logo.
 
-## Features
+## Pages
 
-- Build and edit your resume in a guided form
-- Compare resume content with a target job description and see matching or missing keywords
-- Get an ATS-style match score and suggestions for your summary and experience bullets
-- Preview the resume as you edit
-- Export the finished resume as a PDF
-- Save your workspace in your browser
-- Submit and browse community reviews; shared reviews can be enabled on Vercel
+- `/` — Landing page with links to each tool
+- `/resume-builder` — Build, preview, save, and export a resume as a PDF
+- `/resume-checker` — Compare resume text with a job description and review keyword overlap
+- `/application-letter` — Create and edit a first draft using details you provide
+
+The checker reports exact keyword overlap as a guide. It does not predict ATS outcomes or assess qualifications. The tools run in the browser; the builder saves its draft on the current device.
 
 ## Run locally
 
-You’ll need Node.js and npm.
+You will need Node.js and npm.
 
 ```sh
 npm install
@@ -31,17 +30,6 @@ npm run preview  # Preview the production build locally
 npm run lint     # Run ESLint
 ```
 
-## Shared reviews on Vercel
-
-The frontend works without a review backend. Without one, review submissions are stored locally in the browser. To enable shared reviews, deploy with Vercel and set `BLOB_READ_WRITE_TOKEN` in the project’s environment variables. See [.env.example](.env.example) for the variable name.
-
-The Vercel Functions in `api/` provide:
-
-- `GET /api/reviews` — return approved public reviews
-- `POST /api/reviews` — submit a review
-
-The plain Vite development server serves the frontend only. Use Vercel’s local runtime to develop against the API routes.
-
 ## Built with
 
-React, TypeScript, Vite, Bootstrap, jsPDF, html2canvas, and Vercel Blob.
+React, TypeScript, Vite, Bootstrap Icons, jsPDF, and html2canvas.

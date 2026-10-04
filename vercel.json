@@ -2,6 +2,11 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "version": 2,
+  "rewrites": [
+    { "source": "/resume-builder", "destination": "/index.html" },
+    { "source": "/resume-checker", "destination": "/index.html" },
+    { "source": "/application-letter", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/index.html",
