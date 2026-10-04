@@ -2838,7 +2838,7 @@ function App() {
           </nav>
 
           <button type="button" className="ghost-button topbar-button" onClick={scrollToStudio}>
-            Open studio
+            Optimize my resume
           </button>
         </div>
       </header>
@@ -2848,64 +2848,55 @@ function App() {
           <div className="shell">
             <div className="hero-grid">
               <div className="hero-copy">
-                <span className="eyebrow">Built for job seekers who want scoring, not guesswork.</span>
-                <h1>You are qualified. ResuMay! helps your resume prove it.</h1>
+                <span className="eyebrow">A clearer path from job post to polished resume</span>
+                <h1>Make your resume a clearer match for the job.</h1>
                 <p className="hero-lead">
-                  ResuMay! uses real-time ATS signaling to show what hiring systems see, surface the missing signals, and
-                  turn your draft into a higher-conversion application before you apply.
+                  Use the job description to spot keyword gaps, strengthen relevant experience, and export a clean,
+                  one-page PDF before you apply.
                 </p>
 
                 <div className="hero-actions">
                   <button type="button" className="primary-button" onClick={scrollToStudio}>
-                    <i className="bi bi-arrow-up-right" />
-                    Open ATS studio
+                    <i className="bi bi-stars" />
+                    Optimize my resume
                   </button>
                   <button type="button" className="secondary-button" onClick={loadSample}>
-                    <i className="bi bi-file-earmark-text" />
-                    Load sample workspace
+                    <i className="bi bi-play-circle" />
+                    Try a sample
                   </button>
                 </div>
 
                 <p className="hero-action-note">
-                  Start with a live sample or go straight into the Studio. ResuMay! shows the score movement, the role fit,
-                  and the export-ready result in the same workflow.
+                  Start with your own draft or explore the sample workspace. Your resume stays in this browser while you
+                  work.
                 </p>
 
                 <div className="hero-journey" aria-label="What happens next">
                   <div className="hero-journey-step">
                     <span>01</span>
-                    <strong>Paste the job description</strong>
+                    <strong>Add the job description</strong>
                   </div>
                   <div className="hero-journey-step">
                     <span>02</span>
-                    <strong>Watch the ATS score move</strong>
+                    <strong>Close the keyword gaps</strong>
                   </div>
                   <div className="hero-journey-step">
                     <span>03</span>
-                    <strong>Export the one-page PDF</strong>
+                    <strong>Export your tailored PDF</strong>
                   </div>
                 </div>
 
-                <div className="hero-stats">
-                  <div className="stat-card">
-                    <strong>Signal coverage</strong>
-                    <span>See missing ATS signals before you send the same draft into another hiring pipeline.</span>
-                  </div>
-                  <div className="stat-card">
-                    <strong>+{heroScoreDelta || 36} points</strong>
-                    <span>Use live score movement as proof that the edits are improving match quality, not just wording.</span>
-                  </div>
-                  <div className="stat-card">
-                    <strong>Board-ready PDF</strong>
-                    <span>Export a one-page resume designed to travel better across recruiters, ATS tools, and job boards.</span>
-                  </div>
+                <div className="hero-trust-row" aria-label="Included with ResuMay">
+                  <span><i className="bi bi-check-circle-fill" /> No account required</span>
+                  <span><i className="bi bi-check-circle-fill" /> Local-first editing</span>
+                  <span><i className="bi bi-check-circle-fill" /> PDF export</span>
                 </div>
               </div>
 
               <div className="hero-visual">
                 <div className="hero-card hero-card-score hero-score-hud">
                   <div className="hero-card-header">
-                    <span>Live ATS signal gauge</span>
+                    <span>Example job match score</span>
                     <strong className="hero-score-delta">+{heroScoreDelta || 36}</strong>
                   </div>
 
@@ -2930,14 +2921,14 @@ function App() {
 
                   <div className="hero-score-copy">
                     <span>{heroRecoveredSignals.length} recruiter-facing signals visible</span>
-                    <span>Animated preview of the score movement inside the Studio</span>
+                    <span>Your score updates as you edit</span>
                   </div>
                 </div>
 
                 <div className="hero-card hero-card-compare">
                   <div className="hero-card-header">
-                    <span>Split-view teaser</span>
-                    <span className="hero-compare-caption">Before vs. after ATS visibility</span>
+                    <span>See the difference</span>
+                    <span className="hero-compare-caption">Before and after keyword coverage</span>
                   </div>
 
                   <div className="hero-compare-grid">
@@ -3032,11 +3023,10 @@ function App() {
         <section className="proof-section">
           <div className="shell proof-shell">
             <div className="section-heading proof-heading">
-              <span className="eyebrow">Why the workflow feels different</span>
-              <h2>ResuMay behaves more like live application intelligence than a basic resume editor.</h2>
+              <span className="eyebrow">Why ResuMay</span>
+              <h2>More clarity before you apply.</h2>
               <p>
-                The landing page now mirrors the Studio itself: visible score movement, clearer signal gaps, and a one-page
-                export path that stays tied to the role you are targeting.
+                Keep the job, your edits, and the resume preview together so every change stays focused on the role you want.
               </p>
             </div>
 
@@ -3046,9 +3036,9 @@ function App() {
                   <i className="bi bi-bullseye" />
                 </div>
                 <div className="proof-card-copy">
-                  <span className="proof-card-kicker">Signal audit</span>
-                  <strong>See the gap before you apply</strong>
-                  <p>Find the missing role signals early so you can stop sending blind applications into the same hiring loop.</p>
+                  <span className="proof-card-kicker">Job match</span>
+                  <strong>Know what the role asks for</strong>
+                  <p>Compare your draft with the job description and see which relevant terms are already there or still missing.</p>
                 </div>
               </article>
 
@@ -3057,9 +3047,9 @@ function App() {
                   <i className="bi bi-activity" />
                 </div>
                 <div className="proof-card-copy">
-                  <span className="proof-card-kicker">Score movement</span>
-                  <strong>Watch the application get stronger</strong>
-                  <p>Use the ATS lift as live proof that your edits are improving relevance, not just making the wording longer.</p>
+                  <span className="proof-card-kicker">Focused edits</span>
+                  <strong>Make the next edit count</strong>
+                  <p>Use the match score and writing suggestions to bring your most relevant experience forward.</p>
                 </div>
               </article>
 
@@ -3068,56 +3058,17 @@ function App() {
                   <i className="bi bi-file-earmark-check" />
                 </div>
                 <div className="proof-card-copy">
-                  <span className="proof-card-kicker">One-page output</span>
-                  <strong>Export the version recruiters should see</strong>
-                  <p>Finish with a clean PDF built for job boards, recruiter review, and ATS parsing instead of a generic draft.</p>
+                  <span className="proof-card-kicker">Ready to share</span>
+                  <strong>Take a cleaner resume with you</strong>
+                  <p>Review the live preview, then export a polished PDF for the application you are preparing.</p>
                 </div>
               </article>
             </div>
 
             <div className="proof-inline-note" role="note" aria-label="ResuMay workflow summary">
-              <span>No template switching</span>
-              <span>Visible ATS movement</span>
-              <span>One role-focused workflow</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="principles-section" aria-labelledby="principles-title">
-          <div className="shell">
-            <div className="section-heading principles-heading">
-              <span className="eyebrow">Don Norman in practice</span>
-              <h2 id="principles-title">Senior-level UI/UX structure that explains itself.</h2>
-              <p>
-                ResuMay! is organized so users can immediately understand the system, see the result of each action, and move
-                through the workflow with less friction and less guesswork.
-              </p>
-            </div>
-
-            <div className="principles-grid">
-              <article className="principle-card">
-                <span className="principle-index">01</span>
-                <h3>Signifiers</h3>
-                <p>Clear step labels, explicit actions, and obvious section titles guide every major resume task.</p>
-              </article>
-
-              <article className="principle-card">
-                <span className="principle-index">02</span>
-                <h3>Visibility</h3>
-                <p>ATS score, keyword coverage, and the paper preview stay visible while the user edits.</p>
-              </article>
-
-              <article className="principle-card">
-                <span className="principle-index">03</span>
-                <h3>Feedback</h3>
-                <p>Score deltas, suggestions, and save or export confirmations respond immediately to user actions.</p>
-              </article>
-
-              <article className="principle-card">
-                <span className="principle-index">04</span>
-                <h3>Constraints and mapping</h3>
-                <p>The form flows left to right into the live resume sheet, with structured inputs that keep users on track.</p>
-              </article>
+              <span>One job at a time</span>
+              <span>Suggestions as you edit</span>
+              <span>Preview before export</span>
             </div>
           </div>
         </section>
@@ -3125,29 +3076,28 @@ function App() {
         <section id="how-it-works" className="story-section">
           <div className="shell story-grid">
             <div className="section-heading">
-              <span className="eyebrow">Process</span>
-              <h2>Three steps to a higher-conversion application.</h2>
+              <span className="eyebrow">How it works</span>
+              <h2>From job post to application in three steps.</h2>
               <p>
-                Start with the role, shape the draft around the job description, and export a cleaner one-page PDF that is
-                easier to send with confidence.
+                Start with the role you want, make focused changes, then review and export your resume.
               </p>
             </div>
 
             <div className="story-cards">
               <article className="story-card">
                 <span className="story-step">01</span>
-                <h3>Paste the role and job description</h3>
-                <p>Drop in the position you are targeting so ResuMay! can read the hiring signal before you edit.</p>
+                <h3>Add the job description</h3>
+                <p>Enter the role and paste its description to see the skills and language the employer is looking for.</p>
               </article>
               <article className="story-card">
                 <span className="story-step">02</span>
-                <h3>Tailor the resume to the job</h3>
-                <p>Use the match score, keyword visibility, and content suggestions to strengthen the story recruiters will see.</p>
+                <h3>Bring your experience forward</h3>
+                <p>Build or edit your resume with the match score and suggestions in view.</p>
               </article>
               <article className="story-card">
                 <span className="story-step">03</span>
-                <h3>Export and apply</h3>
-                <p>Review the live paper preview, export the improved PDF, and submit a resume that feels more role-ready.</p>
+                <h3>Preview and export</h3>
+                <p>Check the finished layout, download your PDF, and apply with a resume tailored to that role.</p>
               </article>
             </div>
           </div>
@@ -3158,7 +3108,7 @@ function App() {
             <div className="studio-heading">
               <div>
                 <span className="eyebrow">Optimizer studio</span>
-                <h2>Build the resume. Tune the match. Export the ATS-ready version.</h2>
+                <h2>Build your resume around the job you want.</h2>
               </div>
 
               <div className="studio-actions">
